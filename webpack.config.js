@@ -22,14 +22,23 @@ module.exports = {
       directory: path.join(__dirname, "src"),
     },
   },
-  plugins: ["index", "plan", "training", "information"].map(
-    (file) =>
-      new HTMLWebpackPlugin({
-        template: "./src/" + file + ".html",
-        inject: true,
-        chunks: ["index", "main"],
-        filename: "./" + file + ".html",
-      }),
+  plugins: [
+    new HTMLWebpackPlugin({
+      filename: "index.html",
+      template: "./src/pages/index.html",
+    }),
+    new HTMLWebpackPlugin({
+      filename: "information.html",
+      template: "./src/pages/information.html",
+    }),
+    new HTMLWebpackPlugin({
+      filename: "plan.html",
+      template: "./src/pages/plan.html",
+    }),
+    new HTMLWebpackPlugin({
+      filename: "training.html",
+      template: "./src/pages/training.html",
+    }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
@@ -39,8 +48,8 @@ module.exports = {
         },
       ],
     }),
-    new MiniCssExtractPlugin()
-  ),
+    new MiniCssExtractPlugin(),
+  ],
   module: {
     rules: [
       {
