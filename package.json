@@ -10,7 +10,7 @@
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://github.com/makhabatabd/Business",
+  "homepage": "https://makhabatabd.github.io/Business",
   "dependencies": {
     "bootstrap": "^5.2.0-beta1",
     "gh-pages": "^4.0.0",
