@@ -9,7 +9,7 @@ const htmlPageNames = ["index", "information", "plan", "training"];
 const multipleHtmlPlugins = htmlPageNames.map((name) => {
   return new HTMLWebpackPlugin({
     template: `./src/pages/${name}.html`,
-    filename: `pages/${name}.html`,
+    filename: `${name}.html`,
   });
 });
 
