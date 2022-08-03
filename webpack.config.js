@@ -53,6 +53,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(ttf)/,
+        type: "asset/resource",
+      },
+      {
         test: /\.css$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
@@ -63,10 +67,6 @@ module.exports = {
       {
         test: /\.(jpe?g|png)$/i,
         type: "asset",
-      },
-      {
-        test: /\.(ttf)/,
-        type: "asset/resource",
       },
       {
         test: /\.js$/,
