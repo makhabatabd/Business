@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://makhabatabd.github.io/happy",
+  "homepage": "https://github.com/makhabatabd/Business",
   "dependencies": {
     "bootstrap": "^5.2.0-beta1",
     "gh-pages": "^4.0.0",
