@@ -55,11 +55,12 @@
 
     &__icons svg:hover {
         cursor: pointer;
+
+        path {
+            fill: #47CF34;
+        }
     }
 
-    &__icons svg:hover path {
-        fill: #47CF34;
-    }
 
     &__burger {
         display: none;

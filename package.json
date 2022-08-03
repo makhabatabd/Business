@@ -9,8 +9,10 @@
   },
   "author": "",
   "license": "ISC",
+  "homepage": "https://makhabatabd.github.io/happy",
   "dependencies": {
     "bootstrap": "^5.2.0-beta1",
+    "gh-pages": "^4.0.0",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {

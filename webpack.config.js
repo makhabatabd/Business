@@ -5,6 +5,14 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
+const htmlPageNames = ["index", "information", "plan", "training"];
+const multipleHtmlPlugins = htmlPageNames.map((name) => {
+  return new HTMLWebpackPlugin({
+    template: `./src/pages/${name}.html`,
+    filename: `${name}.html`,
+  });
+});
+
 module.exports = {
   mode: "development",
   entry: ["@babel/polyfill", "./src/js/index.js"],
@@ -23,22 +31,7 @@ module.exports = {
     },
   },
   plugins: [
-    new HTMLWebpackPlugin({
-      filename: "index.html",
-      template: "./src/pages/index.html",
-    }),
-    new HTMLWebpackPlugin({
-      filename: "information.html",
-      template: "./src/pages/information.html",
-    }),
-    new HTMLWebpackPlugin({
-      filename: "plan.html",
-      template: "./src/pages/plan.html",
-    }),
-    new HTMLWebpackPlugin({
-      filename: "training.html",
-      template: "./src/pages/training.html",
-    }),
+    ...multipleHtmlPlugins,
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
