@@ -9,7 +9,6 @@
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://makhabatabd.github.io/Business",
   "dependencies": {
     "bootstrap": "^5.2.0-beta1",
     "normalize.css": "^8.0.1"
